@@ -12,7 +12,7 @@ const CategoriesProvider = ({children}) => {
 
             const {data} = await axios(url)
             setCategories(data.drinks)
-            console.log(data.drinks)
+            //console.log(data.drinks)
         } catch (error) {
             console.error(error)
         }

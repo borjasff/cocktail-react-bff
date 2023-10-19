@@ -23,7 +23,6 @@ export default function FormComponent() {
                 setAlert('')
             }, 4000);
         }
-        setAlert('')
         askDrink(findDrink)
     }
 
@@ -33,6 +32,7 @@ export default function FormComponent() {
     >
 
         {alert && <Alert variant="danger">{alert}</Alert>}
+        
         <Row>
             <Col md={6}>
                 <Form.Group className="mb-3">
@@ -80,6 +80,7 @@ export default function FormComponent() {
                         variant="danger"
                         className="text-uppercase w-100"
                         type="submit"
+                        onClick={handleSubmit}
                         >
                     Find Drinks
                 </Button>
