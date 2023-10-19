@@ -4,7 +4,7 @@ import axios from "axios";
 const DrinksContext = createContext()
 
 const DrinksProvider = ({children}) => {
-    const [ drinks, setDrinks] = useState([])
+    const [drinks, setDrinks] = useState([])
     const [modal, setModal] = useState(false)
     const [drinkId, setDrinkId] = useState('')
     const [recipe, setRecipe] = useState({})
@@ -59,6 +59,7 @@ const DrinksProvider = ({children}) => {
                     handleDrinkIdClick,
                     recipe,
                     load
+                    
                 }}
         >
             {children}

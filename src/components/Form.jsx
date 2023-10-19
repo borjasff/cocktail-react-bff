@@ -16,6 +16,7 @@ export default function FormComponent() {
 
     const handleSubmit = e => {
         e.preventDefault()
+        console.log(Object.values(findDrink))
         if(Object.values(findDrink).includes('')){
             setAlert('Error, All fields are required')
             setTimeout(() => {
