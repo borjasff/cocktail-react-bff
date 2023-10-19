@@ -14,7 +14,7 @@ const DrinksProvider = ({children}) => {
             if(!drinkId ) return
 
             try {
-                const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`
+                const url = `${import.meta.env.VITE_APP_TITLE}/api/json/v1/1/lookup.php?i=${drinkId}`
                 const {data} = await axios(url)
                 setRecipe(data.drinks[0])
             } catch (error) {
@@ -31,7 +31,7 @@ const DrinksProvider = ({children}) => {
 
     const askDrink = async datas => {
         try {
-            const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${datas.name}&c=${datas.category}`
+            const url = `${import.meta.env.VITE_APP_TITLE}/json/v1/1/filter.php?i=${datas.name}&c=${datas.category}`
 
             const {data} = await axios(url)
             setDrinks(data.drinks)
